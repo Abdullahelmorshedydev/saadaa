@@ -10,11 +10,16 @@
             </div>
             <div class="nav_items">
                 <ul class="nav">
-                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="{{ route('index') }}">Home</a></li>
                     <li><a href="#cards">Events</a></li>
                     <li><a href="./about.html">About us</a></li>
                     <li><a href="./contact Us.html">Contact us</a></li>
-                    <li><button class="sigin-btn" onclick="window.location.href='Login.html';">sign in</button></li>
+                    @guest
+                        <li><a class="sigin-btn" href="{{ route('login.index') }}">sign in</a></li>
+                        @endguest
+                        @auth
+                        <li><a class="sigin-btn" href="{{ route('logout') }}">sign out</a></li>
+                    @endauth
                 </ul>
             </div>
             <i onclick="showsidebar()" class="fa-solid fa-bars nav-icon" id="NAV-icon"></i>

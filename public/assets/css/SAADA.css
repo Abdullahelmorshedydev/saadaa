@@ -239,9 +239,7 @@ form.sign-in-form {
 }
 
 .error {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 380px;
     color: red;
 }
 
@@ -509,29 +507,29 @@ ul {
     margin-top: 4rem;
 }
 
-.sigin-btn {
-    height: 4vh;
-    width: 75px;
-    background-color: rgb(249, 118, 184);
-    cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    transition: all 0.3s ease-in;
-    /* box-shadow: 3px 4px 16px 3px black; */
-}
-
-.sigin-btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: #e785e2;
-    box-shadow: 3px 3px 20px 0px rgb(121 119 119 / 63%);
-}
-
 #sidebar li {
     width: 100%;
 }
 
 #sidebar a {
     width: 100%;
+}
+
+.sigin-btn {
+    height: 4vh;
+    width: 100%;
+    background-color: rgb(249, 118, 184);
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+    font-size: 15px;
+}
+
+.sigin-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: #e785e2;
+    box-shadow: 3px 3px 20px 0px rgb(121 119 119 / 63%);
 }
 
 /* nav */
