@@ -16,13 +16,13 @@
                     <li><a href="./contact Us.html">Contact us</a></li>
                     @guest
                         <li><a class="sigin-btn" href="{{ route('login.index') }}">sign in</a></li>
-                        @endguest
-                        @auth
+                    @endguest
+                    @auth
                         <li><a class="sigin-btn" href="{{ route('logout') }}">sign out</a></li>
                     @endauth
                 </ul>
             </div>
-            <i onclick="showsidebar()" class="fa-solid fa-bars nav-icon" id="NAV-icon"></i>
+            <i class="fa-solid fa-bars nav-icon" id="NAV-icon"></i>
         </nav>
 
         <div class="filter">
@@ -301,4 +301,5 @@
     </section>
 @endsection
 @push('script')
+    <script src="{{ asset('assets/js/showcard.js') }}"></script>
 @endpush

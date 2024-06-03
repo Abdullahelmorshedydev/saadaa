@@ -26,12 +26,6 @@ const password = document.getElementById("password");
 const phone = document.getElementById("phone");
 const confirmPassword = document.getElementById("confirmPassword");
 
-// form.addEventListener("submit", (e) => {
-// 	e.preventDefault();
-
-// 	validateInputs();
-// });
-
 const setError = (element, message) => {
 	const inputControl = element.parentElement;
 	const errorDisplay = inputControl.querySelector(".error");
