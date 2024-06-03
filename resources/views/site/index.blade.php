@@ -302,4 +302,7 @@
 @endsection
 @push('script')
     <script src="{{ asset('assets/js/showcard.js') }}"></script>
+    <script>
+        sessionStorage.clear();
+    </script>
 @endpush

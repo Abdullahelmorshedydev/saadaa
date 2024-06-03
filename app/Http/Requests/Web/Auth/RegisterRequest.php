@@ -26,7 +26,19 @@ class RegisterRequest extends FormRequest
             'email_register' => ['required', 'email', 'min:3', 'max:255', 'unique:users,email'],
             'phone' => ['required', 'string', 'min:6', 'max:255'],
             'password_register' => ['required', 'string', 'min:6', 'max:255', 'confirmed'],
-            'password_register_confirmation' => ['required', 'min:6', 'max:255'],
+            'password_register_confirmation' => ['required'],
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'password_register.required' => 'password is required',
+            'password_register.string' => 'password should be string',
+            'password_register.min' => 'password is weak',
+            'password_register.max' => 'password is very strong',
+            'password_register.confirmed' => 'passwords does not match',
+            'password_register_confirmation.required' => 'confirm password is required',
         ];
     }
 }

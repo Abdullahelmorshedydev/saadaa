@@ -58,21 +58,21 @@
                     <h2 class=" title">Sign Up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input id="username" type="text" name="username" placeholder="Username" />
+                        <input id="username" type="text" name="username" value="{{ old('username') }}" placeholder="Username" />
                         @error('username')
                             <div class="error">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input id="phone" type="text" name="phone" placeholder="phone" />
+                        <input id="phone" type="text" name="phone" value="{{ old('phone') }}" placeholder="phone" />
                         @error('phone')
                             <div class="error">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input id="email" name="email_register" type="email" placeholder="Email" />
+                        <input id="email" name="email_register" type="email" value="{{ old('email_register') }}" placeholder="Email" />
                         @error('email_register')
                             <div class="error">{{ $message }}</div>
                         @enderror
