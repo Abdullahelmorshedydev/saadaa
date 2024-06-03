@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Enums\UserRoleEnum;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Enums\UserUserRoleEnum;
 
 class IsAdmin
 {
@@ -16,7 +16,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->role->value != UserRoleEnum::ADMIN->value) {
+        if (auth()->user() && auth()->user()->role->value != UserRoleEnum::ADMIN->value) {
             return redirect()->route('index');
         }
         return $next($request);
