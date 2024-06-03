@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Web\Auth\LoginController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+});
+
+Route::middleware('is.admin')->prefix('/admin')->as('admin.')->group(function () {
+    Route::get('/', HomeController::class)->name('index');
 });
