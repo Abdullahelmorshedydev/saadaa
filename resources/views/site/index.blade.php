@@ -12,8 +12,8 @@
                 <ul class="nav">
                     <li><a href="{{ route('index') }}">Home</a></li>
                     <li><a href="#cards">Events</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                    <li><a href="./contact Us.html">Contact us</a></li>
+                    <li><a href="{{ route('about.index') }}">About us</a></li>
+                    <li><a href="{{ route('contact.index') }}">Contact us</a></li>
                     @guest
                         <li><a class="sigin-btn" href="{{ route('login.index') }}">sign in</a></li>
                     @endguest
@@ -83,37 +83,15 @@
             <div class="indoor">
                 <div class="indoor-cust">
                     <div class="div1">
-                        <div class="div01" onclick="window.location.href='birthday indoor.html';">
-                            <img class="birthdayimg" src="{{ asset('assets/images/birthday.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div010">
-                                <button class="div0100">Birthday</button>
+                        @foreach ($indoorEvents as $event)
+                            <div class="div01" onclick="window.location.href='birthday indoor.html';">
+                                <img class="birthdayimg" src="{{ asset('assets/images/birthday.jpg') }}" alt=""
+                                    srcset="" />
+                                <div class="div010">
+                                    <button class="div0100">{{ $event->name }}</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="div02" onclick="window.location.href='engagment indoor.html';">
-                            <img class="engagmentimg" src="{{ asset('assets/images/engagment.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div020">
-                                <p class="div0200">Engagment</p>
-                            </div>
-                        </div>
-
-                        <div class="div03" onclick="window.location.href='baby shower indoor.html';">
-                            <img class="babyshower" src="{{ asset('assets/images/baby shower.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="divvv211">
-                                <p class="divvv2111">Baby Shower</p>
-                            </div>
-                        </div>
-
-                        <div class="div04" onclick="window.location.href='anniversayindoor.html';">
-                            <img class="partyimg" src="{{ asset('assets/images/anniverse.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div040">
-                                <p class="div0400">Anniversary</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
