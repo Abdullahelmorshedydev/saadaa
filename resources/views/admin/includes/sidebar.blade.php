@@ -63,6 +63,33 @@
                     </ul>
                 </li>
                 <li
+                    class="nav-item {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Venues
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.venues.index') }}"
+                                class="nav-link {{ request()->is('admin/venues') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>All Venues</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.venues.create') }}"
+                                class="nav-link {{ request()->is('admin/venues/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create New Venue</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li
                     class="nav-item {{ request()->is('admin/contacts') || request()->is('admin/contacts/*') ? 'menu-open' : '' }}">
                     <a href="#"
                         class="nav-link {{ request()->is('admin/contacts') || request()->is('admin/contacts/*') ? 'active' : '' }}">

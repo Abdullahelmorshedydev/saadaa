@@ -28,4 +28,9 @@ class Event extends Model
     {
         return $this->morphOne(Image::class, 'morphable');
     }
+
+    public function venues()
+    {
+        return $this->hasMany(Venue::class);
+    }
 }
