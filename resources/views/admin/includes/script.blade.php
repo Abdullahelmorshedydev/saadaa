@@ -9,7 +9,7 @@
 <!-- Bootstrap 4 -->
 <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- ChartJS -->
-<script src="{{ asset('admin/plugins/chart.js') }}/Chart.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/chart.js/Chart.min.js') }}"></script>
 <!-- Sparkline -->
 <script src="{{ asset('admin/plugins/sparklines/sparkline.js') }}"></script>
 <!-- JQVMap -->
@@ -28,8 +28,6 @@
 <script src="{{ asset('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('admin/dist/js/adminlte.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('admin/dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
 

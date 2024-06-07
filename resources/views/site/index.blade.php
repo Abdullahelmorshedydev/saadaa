@@ -18,6 +18,9 @@
                         <li><a class="sigin-btn" href="{{ route('login.index') }}">sign in</a></li>
                     @endguest
                     @auth
+                        @if (is_admin())
+                            <li><a href="{{ route('admin.index') }}">Dashboard</a></li>
+                        @endif
                         <li><a class="sigin-btn" href="{{ route('logout') }}">sign out</a></li>
                     @endauth
                 </ul>

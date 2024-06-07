@@ -27,38 +27,37 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item {{ request()->is('admin/dashboard') ? 'menu-open' : '' }}">
-                    <a href="{{ route('admin.index') }}" class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('admin.index') }}"
+                        class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li
+                    class="nav-item {{ request()->is('admin/events') || request()->is('admin/events/*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ request()->is('admin/events') || request()->is('admin/events/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Events
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
+                            <a href="{{ route('admin.events.index') }}"
+                                class="nav-link {{ request()->is('admin/events') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
+                                <p>All Events</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{ route('admin.events.create') }}"
+                                class="nav-link {{ request()->is('admin/events/create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
+                                <p>Create New Event</p>
                             </a>
                         </li>
                     </ul>
