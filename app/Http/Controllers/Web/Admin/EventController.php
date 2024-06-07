@@ -71,7 +71,7 @@ class EventController extends Controller
             if (isset($event->image)) {
                 FilesTrait::delete($event->image->image);
             }
-            $event->image()->create([
+            $event->image()->update([
                 'image' => FilesTrait::store($request->image, Event::IMG_URL),
             ]);
         }
