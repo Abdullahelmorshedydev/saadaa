@@ -34,4 +34,14 @@ class Venue extends Model
     {
         return $this->morphOne(Image::class, 'morphable');
     }
+
+    public function cartItem()
+    {
+        return $this->hasMany(CartItem::class);
+    }
+
+    public function orderItem()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 }
