@@ -14,10 +14,12 @@ class CartController extends Controller
     public function index()
     {
         $cartItems = [];
+        $cart_total = 0;
         if (auth()->user()->cart) {
             $cartItems = auth()->user()->cart->items;
+            $cart_total = auth()->user()->cart->total;
         }
-        return view('site.pages.cart', compact('cartItems'));
+        return view('site.pages.cart', compact('cartItems', 'cart_total'));
     }
 
     public function addToCart(AddToCartRequest $request)

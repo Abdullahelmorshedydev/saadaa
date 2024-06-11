@@ -32,7 +32,7 @@
                         <td>Date</td>
                         <td>Action</td>
                     </tr>
-                    @if (isset($cartItems))
+                    @if (!empty($cartItems))
                         @foreach ($cartItems as $cartItem)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
@@ -62,13 +62,15 @@
             <h2> Shopping Cart </h2>
             <p id="demo2"></p>
             <h2>Grand Total:</h2>
-            <p id="demo3">{{ $cartItem->cart->total }}</p>
-            <form action="{{ route('order.store') }}" method="post">
-                @csrf
-                <button class="cart-btn" type="submit">
-                    Checkout
-                </button>
-            </form>
+            <p id="demo3">{{ $cart_total }}</p>
+            @if (!empty($cartItems))
+                <form action="{{ route('order.store') }}" method="post">
+                    @csrf
+                    <button class="cart-btn" type="submit">
+                        Checkout
+                    </button>
+                </form>
+            @endif
         </section>
     </section>
 @endsection

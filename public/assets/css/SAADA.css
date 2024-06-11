@@ -467,9 +467,9 @@ a {
     align-items: center;
     flex-wrap: wrap;
     text-decoration: none;
-    gap: 50px;
+    gap: 20px;
     color: #142349;
-    font-size: 18px;
+    font-size: 15px;
     transition: ease all 400ms;
     padding: 0 19px;
 }

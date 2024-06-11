@@ -49,7 +49,8 @@
                                     }
                                 @endphp
                                 @if (!$in_cart)
-                                    <form action="{{ route('cart.add_to_cart') }}" method="post">
+                                    <form action="{{ route('cart.add_to_cart') }}" method="post"
+                                        style="display: flex;align-items: center;flex-direction: column;padding: 0rem 5rem;transition: all 0.2s 0.7s;overflow: hidden;grid-column: 1 / 2;grid-row: 1 / 2;gap: 10px;justify-content: center;">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $venue->id }}">
                                         <input type="date" name="date" class="form-conrol col-3 mt-3 mb-3">
