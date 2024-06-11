@@ -3,6 +3,7 @@
 use App\Http\Controllers\Web\Admin\ContactController;
 use App\Http\Controllers\Web\Admin\EventController;
 use App\Http\Controllers\Web\Admin\HomeController;
+use App\Http\Controllers\Web\Admin\OrderController;
 use App\Http\Controllers\Web\Admin\VenueController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,8 @@ Route::resource('events', EventController::class);
 Route::resource('venues', VenueController::class);
 
 Route::get('/contacts', ContactController::class)->name('contacts.index');
+
+Route::controller(OrderController::class)->prefix('/orders')->as('orders.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/show/{order}', 'show')->name('show');
+});

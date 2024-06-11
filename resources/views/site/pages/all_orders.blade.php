@@ -12,8 +12,8 @@
                 <tbody>
                     <tr>
                         <td>ID</td>
-                        <td>Event Name</td>
-                        <td>Venue Address</td>
+                        <td>Ordered at</td>
+                        <td>Total</td>
                         <td>Items</td>
                     </tr>
                     @foreach ($orders as $order)
