@@ -7,19 +7,6 @@
     @include('site.includes.navbar')
 
     <section class="whole-cart">
-        <section class="cart">
-            <img src="{{ asset('assets/images/3.jpg') }}" class="cart-img">
-            <div class="cart-para">
-                <p>
-                <h3>description:</h3> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque illum,
-                accusantium
-                </p>
-                <p>
-                <h3>price:</h3> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque illum, accusantium
-                </p>
-            </div>
-        </section>
-
         <section class="add-cart">
             <table class="cart-table">
                 <tbody>
