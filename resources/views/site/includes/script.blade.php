@@ -7,8 +7,7 @@
 <script>
     new WOW().init();
 </script>
-<script src="{{ asset('assets/SAADA.js') }}"></script>
-<script src="{{ asset('assets/showcard.js') }}"></script>
-<script src="{{ asset('assets/hide cards.js') }}"></script>
+<script src="{{ asset('assets/js/SAADA.js') }}"></script>
+<script src="{{ asset('assets/js/showcard.js') }}"></script>
 
 @stack('script')

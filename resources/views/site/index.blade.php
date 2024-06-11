@@ -4,29 +4,7 @@
 @endpush
 @section('content')
     <section class="hello-sec">
-        <nav class="wow animate__animated animate__fadeInDown">
-            <div class="nav_logo">
-                <a href="home.html"><img src="{{ asset('assets/images/nav.jpg') }}" /></a>
-            </div>
-            <div class="nav_items">
-                <ul class="nav">
-                    <li><a href="{{ route('index') }}">Home</a></li>
-                    <li><a href="#cards">Events</a></li>
-                    <li><a href="{{ route('about.index') }}">About us</a></li>
-                    <li><a href="{{ route('contact.index') }}">Contact us</a></li>
-                    @guest
-                        <li><a class="sigin-btn" href="{{ route('login.index') }}">sign in</a></li>
-                    @endguest
-                    @auth
-                        @if (is_admin())
-                            <li><a href="{{ route('admin.index') }}">Dashboard</a></li>
-                        @endif
-                        <li><a class="sigin-btn" href="{{ route('logout') }}">sign out</a></li>
-                    @endauth
-                </ul>
-            </div>
-            <i class="fa-solid fa-bars nav-icon" id="NAV-icon"></i>
-        </nav>
+        @include('site.includes.navbar')
 
         <div class="filter">
             <div class="home-sec">
@@ -84,8 +62,8 @@
                 <div class="indoor-cust">
                     <div class="div1">
                         @foreach ($indoorEvents as $event)
-                            <div class="div01" onclick="window.location.href='birthday indoor.html';">
-                                <img class="birthdayimg" src="{{ asset('assets/images/birthday.jpg') }}" alt=""
+                            <div class="div01" onclick="window.location.href='event/' + {{ $event->id }};">
+                                <img class="birthdayimg" src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/morshedy.jpg') }}" alt=""
                                     srcset="" />
                                 <div class="div010">
                                     <button class="div0100">{{ $event->name }}</button>
@@ -99,86 +77,15 @@
             <div class="outdoor">
                 <div class="outdoor-cust">
                     <div class="div1">
-                        <div class="div01" onclick="window.location.href='birthday.html';">
-                            <img class="birthdayimg" src="{{ asset('assets/images/birthday.jpg') }}" alt=""
+                        @foreach ($outdoorEvents as $event)
+                        <div class="div01" onclick="window.location.href='event/' + {{ $event->id }};">
+                            <img class="birthdayimg" src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/morshedy.jpg') }}" alt=""
                                 srcset="" />
                             <div class="div010">
-                                <button class="div0100">Birthday</button>
+                                <button class="div0100">{{ $event->name }}</button>
                             </div>
                         </div>
-
-                        <div class="div02" onclick="window.location.href='engagmentoutdoor.html';">
-                            <img class="engagmentimg" src="{{ asset('assets/images/engagment.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div020">
-                                <p class="div0200">Engagment</p>
-                            </div>
-                        </div>
-
-                        <div class="div03" onclick="window.location.href='wedding.html';">
-                            <img class="weeding" src="{{ asset('assets/images/weeding.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div030">
-                                <p class="div0300">Weeding</p>
-                            </div>
-                        </div>
-
-                        <div class="div04" onclick="window.location.href='funday.html';">
-                            <img class="partyimg" src="{{ asset('assets/images/party.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="div040">
-                                <p class="div0400">funday</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="divv2">
-                        <div class="divv12" onclick="window.location.href='dishparty.html';">
-                            <img class="dishparty" src="{{ asset('assets/images/dish party.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="divv112">
-                                <button class="divv112">Dish Party</button>
-                            </div>
-                        </div>
-
-                        <div class="divvv21" onclick="window.location.href='babyshoweroutdoor.html';">
-                            <img class="babyshower" src="{{ asset('assets/images/baby shower.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="divvv211">
-                                <p class="divvv2111">Baby Shower</p>
-                            </div>
-                        </div>
-                        <div class="divvvv31" onclick="window.location.href='date.html';">
-                            <img class="date" src="{{ asset('assets/images/date.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="divvvv311">
-                                <p class="divvvv3111">DATE</p>
-                            </div>
-                        </div>
-                        <div class="divvvvv41" onclick="window.location.href='conference.html';">
-                            <img class="Corporate" src="{{ asset('assets/images/confrence.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="divvvvv411">
-                                <p class="divvvvv4111">confrence</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lastdiv1">
-                        <div class="lastdiv11" onclick="window.location.href='anniversary.html';">
-                            <img class="anniverse" src="{{ asset('assets/images/anniverse.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="lastdiv1111">
-                                <p class="lastdiv1111">Anniversary</p>
-                            </div>
-                        </div>
-                        <div class="lastdiv2" onclick="window.location.href='prom.html';">
-                            <img class="prom" src="{{ asset('assets/images/graduation.jpg') }}" alt=""
-                                srcset="" />
-                            <div class="lastdiv22">
-                                <p class="lastdiv222">PROM</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -282,7 +189,6 @@
     </section>
 @endsection
 @push('script')
-    <script src="{{ asset('assets/js/showcard.js') }}"></script>
     <script>
         sessionStorage.clear();
     </script>

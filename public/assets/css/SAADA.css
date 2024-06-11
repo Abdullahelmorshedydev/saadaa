@@ -776,7 +776,7 @@ ul {
 
 .div1 {
     /* background-color: red; */
-    height: 30rem;
+    height: auto;
     width: 100%;
     margin-top: 0rem;
     margin: 0.4rem;
@@ -988,7 +988,7 @@ ul {
     font-family: sans-serif;
 }
 
-.div1:hover .div0400 {
+.div1:hover {
     opacity: 0.8;
 }
 

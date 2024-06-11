@@ -17,17 +17,17 @@ class CartController extends Controller
         if (auth()->user()->cart) {
             $cartItems = auth()->user()->cart->items;
         }
-        return view('web.site.pages.cart', compact('cartItems'));
+        return view('site.pages.cart', compact('cartItems'));
     }
 
     public function addToCart(AddToCartRequest $request)
     {
         $data = $request->validated();
 
-        $data['user_id'] = auth('web')->user()->id;
+        $data['user_id'] = auth()->user()->id;
         $venue = Venue::where('id', $data['id'])->first();
 
-        $cart = auth('web')->user()->cart;
+        $cart = auth()->user()->cart;
         if (!isset($cart)) {
             $cart = Cart::create($data);
         }

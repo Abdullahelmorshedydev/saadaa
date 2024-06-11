@@ -49,8 +49,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::controller(OrderController::class)->prefix('/orders')->as('order.')->group(function () {
-        Route::get('/checkout', 'checkout')->name('checkout');
-        Route::get('/order-success/{order}', 'orderSuccess')->name('order_success');
         Route::post('/store', 'store')->name('store');
         Route::get('/', 'allOrders')->name('all_orders');
     });

@@ -11,14 +11,8 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function checkout()
-    {
-        return view('web.site.pages.order.checkout');
-    }
-
     public function store(Request $request)
     {
-        $data = $request->validated();
         $data['user_id'] = auth()->user()->id;
         $data['total'] = auth()->user()->cart->total;
 
@@ -35,17 +29,12 @@ class OrderController extends Controller
 
         Cart::where('id', auth()->user()->cart->id)->delete();
 
-        return redirect()->route('order.order_success', $order->id)->with('success', __('site/order.success'));
-    }
-
-    public function orderSuccess(Order $order)
-    {
-        return view('web.site.pages.order.success_order', compact('order'));
+        return redirect()->route('index');
     }
 
     public function allOrders()
     {
-        $orders = Order::where('user_id', auth()->user()->id)->orderBy('updated_at', 'DESC')->paginate();
-        return view('web.site.pages.order.all_orders', compact('orders'));
+        $orders = Order::where('user_id', auth()->user()->id)->orderBy('updated_at', 'DESC')->get();
+        return view('site.pages.all_orders', compact('orders'));
     }
 }
