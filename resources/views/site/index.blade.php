@@ -60,7 +60,7 @@
 
             <div class="indoor">
                 <div class="indoor-cust">
-                    <div class="div1">
+                    <div class="divv2">
                         @foreach ($indoorEvents as $event)
                             <div class="div01" onclick="window.location.href='event/' + {{ $event->id }};">
                                 <img class="birthdayimg" src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/morshedy.jpg') }}" alt=""
@@ -76,7 +76,7 @@
 
             <div class="outdoor">
                 <div class="outdoor-cust">
-                    <div class="div1">
+                    <div class="divv2">
                         @foreach ($outdoorEvents as $event)
                         <div class="div01" onclick="window.location.href='event/' + {{ $event->id }};">
                             <img class="birthdayimg" src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/morshedy.jpg') }}" alt=""

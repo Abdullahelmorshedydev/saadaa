@@ -11,6 +11,7 @@ input {
     font-family: "Poppins", sans-serif;
     /* background-color: #b4a4a4; */
 }
+
 body {
     width: 100%;
 }
@@ -789,6 +790,8 @@ ul {
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
+
+
 }
 
 /* _________________________________ */
@@ -1004,8 +1007,7 @@ ul {
 
 /* ___________________________________________________________________ */
 .divv2 {
-    /* background-color: red; */
-    height: 30rem;
+    height: auto;
     width: 100%;
     margin-top: 0rem;
     margin: 0.4rem;
@@ -2567,9 +2569,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    bottom: 0;
-    left: 0;
+
 }
 
 /* footer END */
@@ -2646,6 +2646,7 @@ footer {
 }
 
 @media screen and (max-width: 1263px) {
+
     .card1,
     .card2,
     .card3 {
@@ -2691,6 +2692,7 @@ footer {
 }
 
 @media screen and (min-width: 1165px) and (max-width: 1263px) {
+
     .card1,
     .card2,
     .card3 {
@@ -3489,6 +3491,7 @@ footer {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1262px) {
+
     .mayicon,
     .hashemicon,
     .Sabrinaicon {
@@ -5893,6 +5896,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.add-cart {
+    height: 89.5vh;
 }
 
 .td-btn {
