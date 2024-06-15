@@ -1008,7 +1008,8 @@ ul {
 /* ___________________________________________________________________ */
 .divv2 {
     height: auto;
-    width: 100%;
+    min-width: 100%;
+    width: auto;
     margin-top: 0rem;
     margin: 0.4rem;
     margin-top: 2rem;
