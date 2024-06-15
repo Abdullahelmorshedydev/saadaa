@@ -34,6 +34,7 @@
                                 <td>
                                     <form action="{{ route('cart.delete_item') }}" method="post">
                                         @csrf
+                                        @method('DELETE')
                                         <input type="hidden" name="id" value="{{ $cartItem->id }}">
                                         <button class="cart-btn" type="submit">
                                             Delete
