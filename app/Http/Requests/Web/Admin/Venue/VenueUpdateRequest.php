@@ -22,7 +22,7 @@ class VenueUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'min:3', 'max:255', 'string', 'unique:venues,name,' . $this->venue->id],
+            'name' => ['required', 'min:3', 'max:255', 'string'],
             'address' => ['required', 'min:3', 'max:255', 'string'],
             'price' => ['required', 'numeric', 'min:0'],
             'event_id' => ['required', 'integer', 'exists:events,id'],
