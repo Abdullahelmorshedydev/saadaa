@@ -50,7 +50,7 @@ class CartController extends Controller
     public function removeItem(Request $request)
     {
         $cart = auth()->user()->cart;
-        $cart_item = CartItem::where('cart_id', $cart->id)->where('venue_id', $request->id)->first();
+        $cart_item = CartItem::where('id', $request->id)->first();
         $cart->update([
             'total' => $cart->total - $cart_item->venue->price,
         ]);
