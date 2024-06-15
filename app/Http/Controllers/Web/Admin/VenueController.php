@@ -87,8 +87,10 @@ class VenueController extends Controller
      */
     public function destroy(Venue $venue)
     {
-        FilesTrait::delete($venue->image->image);
-        $venue->image()->delete();
+        if (isset($venue->image)) {
+            FilesTrait::delete($venue->image->image);
+            $venue->image()->delete();
+        }
         $venue->delete();
         return back();
     }

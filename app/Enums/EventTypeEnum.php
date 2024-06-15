@@ -18,8 +18,8 @@ enum EventTypeEnum: int
     public function lang(): string
     {
         return match ($this) {
-            self::INDOOR => 'OutDoor',
-            self::OUTDOOR => 'InDoor',
+            self::INDOOR => 'InDoor',
+            self::OUTDOOR => 'OutDoor',
         };
     }
 }
