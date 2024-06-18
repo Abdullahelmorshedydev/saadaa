@@ -62,7 +62,7 @@
             <div class="sabrina">
                 <div class="sabrinaimg">
                     <img class="sabrinaimg1 wow animate__animated animate__backInDown"
-                        src="{{ asset('assets/images/yasmin.jpg') }}" alt="">
+                        src="{{ asset('assets/images/abdo.jpg') }}" alt="">
                 </div>
                 <div class="sabrinacontact wow animate__animated animate__bounceInUp">
                     <h2 class="sabrinacontacth2"> Abd-ELrahman Ehab </h2>
