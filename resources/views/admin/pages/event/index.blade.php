@@ -34,7 +34,7 @@
                                 <tr>
                                     <th>{{ $events->firstItem() + $loop->index }}</th>
                                     <td>
-                                        <img src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/morshedy.jpg') }}"
+                                        <img src="{{ asset($event->image ? 'storage/' . $event->image->image : 'admin/images/ezz.jpg') }}"
                                             width="50px" alt="">
                                     </td>
                                     <td>{{ $event->name }}</td>
