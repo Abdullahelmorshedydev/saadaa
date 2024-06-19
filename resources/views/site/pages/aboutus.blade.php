@@ -155,8 +155,11 @@
             event . </span>
         </div>
         <div class="div3section81">
-            <button class="last-section-btn wow animate__animated animate__rotateIn ">Book
-                Now</button>
+            <form action="{{ route('index') }}#cards" method="get" style="height: 15vh">
+                
+                <button class="last-section-btn wow animate__animated animate__rotateIn " type="submit">Book Now</button>
+            </form>
+            
         </div>
     </section>
 @endsection
