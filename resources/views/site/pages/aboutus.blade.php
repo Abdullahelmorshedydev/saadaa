@@ -155,8 +155,10 @@
             event . </span>
         </div>
         <div class="div3section81">
-            <button class="last-section-btn wow animate__animated animate__rotateIn ">Book
-                Now</button>
+              
+                <button  class="last-section-btn wow animate__animated animate__rotateIn ">Book
+                    Now</button>
+              
         </div>
     </section>
 @endsection
