@@ -49,18 +49,18 @@ var cart = [];
 
 function addProduct() {
     var productID = document.getElementById("productID").value;
-    // var product_desc = document.getElementById("product_desc").value;
+
     var qty = document.getElementById("quantity").value;
     var price = document.getElementById("price").value;
 
     var newProduct = {
         product_id: null,
-        // product_desc: null,
+
         product_qty: 0,
         product_price: 0.00,
     };
     newProduct.product_id = productID;
-    // newProduct.product_desc = product_desc;
+
     newProduct.product_qty = qty;
     newProduct.product_price = price;
 
@@ -129,7 +129,7 @@ function renderCartTable() {
 
     html += "<table id='tblCart' border='1|1'>";
     html += "<tr><td>Product ID</td>";
-    // html += "<td>Product Description</td>";
+
     html += "<td>Quantity</td>";
     html += "<td>Price</td>";
     html += "<td>Total</td>";
@@ -138,7 +138,7 @@ function renderCartTable() {
     for (var i = 0; i < cart.length; i++) {
         html += "<tr>";
         html += "<td>" + cart[i].product.product_id + "</td>";
-        // html += "<td>" + cart[i].product.product_desc + "</td>";
+        ;
         html += "<td>" + cart[i].product_qty + "</td>";
         html += "<td>" + cart[i].product.product_price + "</td>";
         html += "<td>" + parseFloat(cart[i].product.product_price) * parseInt(cart[i].product_qty) + "</td>";

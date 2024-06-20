@@ -131,7 +131,7 @@
     </section>
 
     <div class="header">
-        <h1>lorem</h1>
+        <h1>SAA'DA</h1>
         <hr>
     </div>
     <section class="home-sec4">
@@ -140,14 +140,11 @@
                 <img class="desc-img" src="{{ asset('assets/images/home sec4.1.jpg') }}" alt="">
             </div>
 
-            <div class="desc-content ">
-                <h2>lorem</h2>
+            <div class="desc-content " style="font-size:18px;">
+                <h2>Your perfect day</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique velit totam unde, nobis
-                    placeat
-                    fugit recusandae magni quo veniam alias aliquam facilis vero dignissimos eligendi quas vel
-                    possimus,
-                    aspernatur nam!
+                   we turn your dreams into reality ,specializing and creating unforgetable wedding, our team insuers that every datail is perfect 
+                   so you can enjoy your big day ,stress free,we craft events that not only beautiful but also seamless.
                 </p>
             </div>
         </div>
@@ -158,14 +155,10 @@
             </div>
 
             <div class="desc-content-2 ">
-                <h2>lorem</h2>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique velit totam unde, nobis
-                    placeat
-                    fugit recusandae magni quo veniam alias aliquam facilis vero dignissimos eligendi quas vel
-                    possimus,
-                    aspernatur nam!
-                </p>
+                <h2>Meticulous planning</h2>
+                <p style="font-size:18px;">
+                    we are specialzed in turning dreams into reality without worrying so you can focus on making memories that last a lifetime
+                    ,let us bring your story to live with our meticulous planning and creative flair. 
             </div>
         </div>
     </section>

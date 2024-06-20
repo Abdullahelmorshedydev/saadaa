@@ -58,7 +58,7 @@ function validateForm() {
 	var passwordError = document.getElementById("passwordError");
 	var isValid = true;
 
-	// Username validation
+
 	if (usernamee === "") {
 		usernameError.textContent = "Username is required";
 		isValid = false;
@@ -66,7 +66,7 @@ function validateForm() {
 		usernameError.textContent = "";
 	}
 
-	// Password validation
+
 	if (passwordd === "") {
 		passwordError.textContent = "Password is required";
 		isValid = false;
