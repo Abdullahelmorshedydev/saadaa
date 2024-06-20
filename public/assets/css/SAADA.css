@@ -6209,7 +6209,7 @@ tr:nth-child(even) {
     }
 }
 
-@media screen and (min-width: 340px) and (max-width: 525px) {
+@media screen and (min-width: 325px) and (max-width: 525px) {
     .home-sec4 {
         background-image: url("./h1-img-14.jpg");
         width: 100%;
@@ -6232,16 +6232,16 @@ tr:nth-child(even) {
     }
 
     .desc-img:hover {
-        scale: 1.02;
+        scale: 1.06;
     }
 
     .desc-img-2:hover {
-        scale: 1.02;
+        scale: 1.06;
     }
 
     .desc-img-div,
     .desc-img-div2 {
-        width: 30%;
+        width: 70%;
     }
 
     .first-desc {
@@ -6273,12 +6273,7 @@ tr:nth-child(even) {
 
     .desc-content,
     .desc-content-2 {
-        width: 31%;
-    }
-
-    .desc-content,
-    .desc-content-2 p {
-        font-size: 15px;
+        width: 70%;
     }
 }
 
