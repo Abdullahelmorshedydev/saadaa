@@ -32,11 +32,11 @@
                                 <td>{{ $cartItem->venue->price }}</td>
                                 <td>{{ $cartItem->date }}</td>
                                 <td>
-                                    <form action="{{ route('cart.delete_item') }}" method="post">
+                                    <form style="height: 10vh"  action="{{ route('cart.delete_item') }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <input type="hidden" name="id" value="{{ $cartItem->id }}">
-                                        <button class="cart-btn" type="submit">
+                                        <button  class="cart-btn" type="submit">
                                             Delete
                                         </button>
                                     </form>
@@ -52,7 +52,7 @@
             <h2>Grand Total:</h2>
             <p id="demo3">{{ $cart_total }}</p>
             @if (!empty($cartItems))
-                <form action="{{ route('order.store') }}" method="post">
+                <form style="height: 10vh"  action="{{ route('order.store') }}" method="post">
                     @csrf
                     <button class="cart-btn" type="submit">
                         Checkout
