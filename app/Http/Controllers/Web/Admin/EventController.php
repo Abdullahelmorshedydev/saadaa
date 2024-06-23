@@ -41,7 +41,7 @@ class EventController extends Controller
         $event->image()->create([
             'image' => FilesTrait::store($request->image, Event::IMG_URL),
         ]);
-        return redirect()->route('admin.events.index');
+        return redirect()->route('admin.events.index')->with('success', 'Event Created Successfully');
     }
 
     /**
@@ -75,7 +75,7 @@ class EventController extends Controller
                 'image' => FilesTrait::store($request->image, Event::IMG_URL),
             ]);
         }
-        return redirect()->route('admin.events.index');
+        return redirect()->route('admin.events.index')->with('success', 'Event Updated Successfully');
     }
 
     /**
@@ -88,6 +88,6 @@ class EventController extends Controller
             $event->image()->delete();
         }
         $event->delete();
-        return back();
+        return back()->with('success', 'Event Deleted Successfully');
     }
 }

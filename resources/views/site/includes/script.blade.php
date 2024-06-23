@@ -10,4 +10,24 @@
 <script src="{{ asset('assets/js/SAADA.js') }}"></script>
 <script src="{{ asset('assets/js/showcard.js') }}"></script>
 
+<!-- jQuery -->
+<script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+@if (session('success'))
+    <script>
+        toastr.success("{{ session('success') }}")
+    </script>
+@endif
+@if (session('error'))
+    <script>
+        toastr.error("{{ session('error') }}")
+    </script>
+@endif
+
 @stack('script')

@@ -44,7 +44,7 @@ class CartController extends Controller
             'total' => $cart->total + $venue->price,
         ]);
 
-        return back();
+        return redirect()->back()->with('success', 'Added to cart successfully');
     }
 
     public function removeItem(Request $request)
@@ -55,6 +55,6 @@ class CartController extends Controller
             'total' => $cart->total - $cart_item->venue->price,
         ]);
         $cart_item->delete();
-        return back();
+        return back()->with('success', 'Remove from cart successfully');
     }
 }

@@ -43,7 +43,7 @@ class VenueController extends Controller
         $venue->image()->create([
             'image' => FilesTrait::store($request->image, Venue::IMG_URL),
         ]);
-        return redirect()->route('admin.venues.index');
+        return redirect()->route('admin.venues.index')->with('success', 'Venue Created Successfully');
     }
 
     /**
@@ -79,7 +79,7 @@ class VenueController extends Controller
                 'image' => FilesTrait::store($request->image, Venue::IMG_URL),
             ]);
         }
-        return redirect()->route('admin.venues.index');
+        return redirect()->route('admin.venues.index')->with('success', 'Venue Updated Successfully');
     }
 
     /**
@@ -92,6 +92,6 @@ class VenueController extends Controller
             $venue->image()->delete();
         }
         $venue->delete();
-        return back();
+        return back()->with('success', 'Venue Deleted Successfully');
     }
 }

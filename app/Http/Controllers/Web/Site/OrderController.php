@@ -29,7 +29,7 @@ class OrderController extends Controller
 
         Cart::where('id', auth()->user()->cart->id)->delete();
 
-        return redirect()->route('index');
+        return redirect()->route('order.all_orders')->with('success', 'Order Checked out successfully');
     }
 
     public function allOrders()

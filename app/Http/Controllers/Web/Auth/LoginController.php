@@ -28,7 +28,7 @@ class LoginController extends Controller
             ]);
         }
         Auth::login($user);
-        return redirect()->route('index');
+        return redirect()->route('index')->with('success', 'Logged in Successfully');
     }
 
     public function register(RegisterRequest $request)
@@ -41,12 +41,12 @@ class LoginController extends Controller
             'password' => Hash::make($data['password_register']),
         ]);
         auth()->login($user);
-        return redirect()->route('index');
+        return redirect()->route('index')->with('success', 'Register Successfully');
     }
 
     public function logout ()
     {
         auth()->logout();
-        return back();
+        return back()->with('success', 'Logged out Successfully');
     }
 }
